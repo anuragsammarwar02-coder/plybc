@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLY B0Y C@LL</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>PLY B0Y CLL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,190 +14,230 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: #0f0f13;
+            background: #0b0b0f;
             color: #fff;
             min-height: 100vh;
             overflow-x: hidden;
         }
 
-        /* Background glow effects */
         .bg-glow {
             position: fixed;
-            width: 600px;
-            height: 600px;
+            width: 650px;
+            height: 650px;
             border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.25;
+            filter: blur(130px);
+            opacity: 0.22;
             z-index: -1;
         }
         .glow-1 {
             background: #e91e63;
-            top: -200px;
-            left: -150px;
+            top: -250px;
+            left: -180px;
         }
         .glow-2 {
             background: #9c27b0;
-            bottom: -200px;
-            right: -150px;
+            bottom: -250px;
+            right: -180px;
         }
 
         .container {
             max-width: 480px;
             margin: 0 auto;
-            padding: 40px 24px 60px;
+            padding: 28px 20px 50px;
             text-align: center;
         }
 
-        /* Logo */
+        /* Top bar */
+        .top-bar {
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            color: #aaa;
+            margin-bottom: 36px;
+            font-weight: 500;
+        }
+
+        /* ===== LOGO CENTRE SECTION ===== */
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
         .logo-wrap {
             position: relative;
-            display: inline-block;
-            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 14px;
         }
+
         .logo {
-            width: 130px;
-            height: 130px;
+            width: 125px;
+            height: 125px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid rgba(255,255,255,0.12);
-            box-shadow: 0 0 40px rgba(233, 30, 99, 0.35);
+            border: 3px solid rgba(255,255,255,0.12);
+            box-shadow: 0 0 45px rgba(233, 30, 99, 0.45);
+            display: block;
         }
+
         .logo-ring {
             position: absolute;
-            inset: -8px;
+            inset: -9px;
             border-radius: 50%;
-            border: 2px solid transparent;
+            border: 2.5px solid transparent;
             border-top-color: #e91e63;
-            border-right-color: #9c27b0;
+            border-right-color: #ce93d8;
             animation: spin 6s linear infinite;
         }
+
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
 
-        /* Heading */
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-            background: linear-gradient(90deg, #fff, #ff80ab);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .active-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(233, 30, 99, 0.15);
+            border: 1px solid rgba(233, 30, 99, 0.4);
+            color: #ff80ab;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 16px;
+            border-radius: 30px;
+            margin-bottom: 28px;
         }
-        .tagline {
-            font-size: 15px;
-            color: #aaa;
-            margin-bottom: 36px;
-            font-weight: 300;
+
+        .active-dot {
+            width: 8px;
+            height: 8px;
+            background: #e91e63;
+            border-radius: 50%;
+            animation: pulse 1.4s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.35; }
+        }
+
+        /* Title */
+        h1 {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ddd;
+            margin-bottom: 24px;
+        }
+
+        /* Hindi text */
+        .hindi-text {
+            font-size: 14.5px;
+            color: #bbb;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            padding: 0 6px;
+        }
+        .hindi-text strong {
+            color: #ff80ab;
+            font-weight: 600;
+        }
+
+        /* CTA Button */
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #e91e63, #9c27b0);
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 42px;
+            border-radius: 50px;
+            font-size: 15.5px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 32px rgba(233, 30, 99, 0.5);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 310px;
+        }
+        .cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(233, 30, 99, 0.65);
+        }
+
+        .limited {
+            margin-top: 13px;
+            font-size: 12.5px;
+            color: #e91e63;
+            font-weight: 500;
         }
 
         /* Features */
         .features {
             display: grid;
-            gap: 14px;
-            margin-bottom: 40px;
-            text-align: left;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 38px 0 32px;
         }
         .feature {
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 16px;
-            padding: 16px 18px;
-            display: flex;
-            align-items: center;
-            gap: 14px;
+            border-radius: 14px;
+            padding: 17px 10px;
             transition: all 0.25s ease;
         }
         .feature:hover {
             background: rgba(255,255,255,0.07);
-            border-color: rgba(233, 30, 99, 0.3);
-            transform: translateY(-2px);
+            border-color: rgba(233, 30, 99, 0.35);
         }
         .feature-icon {
-            width: 42px;
-            height: 42px;
-            background: linear-gradient(135deg, #e91e63, #9c27b0);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-size: 20px;
-            flex-shrink: 0;
+            margin-bottom: 7px;
         }
-        .feature-text h3 {
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 2px;
-        }
-        .feature-text p {
+        .feature h3 {
             font-size: 13px;
-            color: #999;
-            font-weight: 300;
-        }
-
-        /* CTA Button */
-        .cta {
-            display: inline-block;
-            background: linear-gradient(135deg, #e91e63, #9c27b0);
-            color: #fff;
-            text-decoration: none;
-            padding: 16px 48px;
-            border-radius: 50px;
-            font-size: 16px;
             font-weight: 600;
-            letter-spacing: 0.5px;
-            box-shadow: 0 8px 30px rgba(233, 30, 99, 0.4);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(233, 30, 99, 0.55);
-        }
-        .cta::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-        }
-        .cta:hover::after {
-            left: 100%;
+            color: #eee;
         }
 
-        /* Timer */
-        .timer-box {
-            margin-top: 32px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 14px;
-            padding: 14px 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-            color: #ccc;
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 38px;
         }
-        #countdown {
-            background: #e91e63;
-            color: #fff;
+        .stat h4 {
+            font-size: 21px;
             font-weight: 700;
-            padding: 2px 10px;
-            border-radius: 8px;
-            min-width: 28px;
-            display: inline-block;
+            color: #e91e63;
+        }
+        .stat p {
+            font-size: 11px;
+            color: #888;
+            margin-top: 3px;
+            letter-spacing: 0.5px;
         }
 
-        /* Bottom note */
-        .note {
-            margin-top: 40px;
-            font-size: 12px;
-            color: #666;
-            line-height: 1.6;
+        /* Footer */
+        .footer {
+            font-size: 11px;
+            color: #555;
+            line-height: 1.7;
+        }
+        .footer span {
+            color: #777;
         }
     </style>
 </head>
@@ -206,77 +246,91 @@
     <div class="bg-glow glow-2"></div>
 
     <div class="container">
-        <!-- Logo -->
-        <div class="logo-wrap">
-            <div class="logo-ring"></div>
-            <img src="https://cdn5.telesco.pe/file/l3J5R5b4Jl8487kXmQd01fSMgcX9rS_x0zksVzY-YD_kNZ_yY82R4dN4KykltfKvJhFr_U9ySvZaBSrmMf7lKR37EEm3VMRNUwXR1lsNTivlPkA1OfVE4Hff_8Te0RqvWikF24_TLjK-IBuZkwFpyqhDbHWQcXo1YG9_FolziSbk_ZkNtrlTM8hjrr6m6VOeEip66QrdiKDdOS57pvWNSulGgMe01w23N2El2_ElffhANZkcVSSdqkl7VeuK0iUFSXcQBtU_4S1RLSjY2Am1npQrY4cCqAEj9FRip6Ju-CN88wpKiInsjNWc-9u2Ph0H63Fc6vG2JvqFCQH7LBgREQ.jpg" 
-                 alt="PLY B0Y C@LL" 
-                 class="logo">
+
+        <!-- Top Bar -->
+        <div class="top-bar">
+            TRUSTED • VERIFIED • REAL • DAILY UPDATES • 18+ ONLY
+        </div>
+
+        <!-- LOGO CENTRE -->
+        <div class="logo-section">
+            <div class="logo-wrap">
+                <div class="logo-ring"></div>
+                <img src="https://cdn5.telesco.pe/file/l3J5R5b4Jl8487kXmQd01fSMgcX9rS_x0zksVzY-YD_kNZ_yY82R4dN4KykltfKvJhFr_U9ySvZaBSrmMf7lKR37EEm3VMRNUwXR1lsNTivlPkA1OfVE4Hff_8Te0RqvWikF24_TLjK-IBuZkwFpyqhDbHWQcXo1YG9_FolziSbk_ZkNtrlTM8hjrr6m6VOeEip66QrdiKDdOS57pvWNSulGgMe01w23N2El2_ElffhANZkcVSSdqkl7VeuK0iUFSXcQBtU_4S1RLSjY2Am1npQrY4cCqAEj9FRip6Ju-CN88wpKiInsjNWc-9u2Ph0H63Fc6vG2JvqFCQH7LBgREQ.jpg" 
+                     alt="PLY B0Y CLL" 
+                     class="logo">
+            </div>
+
+            <div class="active-badge">
+                <div class="active-dot"></div>
+                ACTIVE NOW
+            </div>
         </div>
 
         <!-- Title -->
-        <h1>PLY B0Y C@LL</h1>
-        <p class="tagline">Premium Private Connections</p>
+        <h1>EXCLUSIVE</h1>
+        <div class="subtitle">TELEGRAM COMMUNITY</div>
+
+        <!-- Hindi Text -->
+        <div class="hindi-text">
+            भाइयों यहाँ मिलता है <strong>Real & Genuine काम</strong> — बिल्कुल free<br>
+            एक बार ज़रूर join करें 👇
+        </div>
+
+        <!-- CTA -->
+        <a href="https://t.me/+FDwp0NGJTrRlYTI1" class="cta" target="_blank">
+            JOIN FREE TELEGRAM
+        </a>
+        <div class="limited">⚠️ LIMITED SLOTS – JOIN NOW</div>
 
         <!-- Features -->
         <div class="features">
             <div class="feature">
+                <div class="feature-icon">✅</div>
+                <h3>REAL WORK</h3>
+            </div>
+            <div class="feature">
                 <div class="feature-icon">🔒</div>
-                <div class="feature-text">
-                    <h3>100% Private & Secure</h3>
-                    <p>Your conversations stay completely confidential</p>
-                </div>
+                <h3>TRUSTED</h3>
             </div>
             <div class="feature">
-                <div class="feature-icon">⚡</div>
-                <div class="feature-text">
-                    <h3>Instant Access</h3>
-                    <p>Connect within seconds — no waiting</p>
-                </div>
+                <div class="feature-icon">📅</div>
+                <h3>DAILY UPDATES</h3>
             </div>
             <div class="feature">
-                <div class="feature-icon">🌟</div>
-                <div class="feature-text">
-                    <h3>Exclusive Members</h3>
-                    <p>Join a carefully selected premium community</p>
-                </div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">💬</div>
-                <div class="feature-text">
-                    <h3>Real-time Chat</h3>
-                    <p>Smooth & fast messaging experience</p>
-                </div>
+                <div class="feature-icon">💚</div>
+                <h3>FREE JOIN</h3>
             </div>
         </div>
 
-        <!-- CTA Button -->
-        <a href="https://t.me/+FDwp0NGJTrRlYTI1" class="cta">Join Now →</a>
-
-        <!-- Timer -->
-        <div class="timer-box">
-            Redirecting in <span id="countdown">10</span> seconds
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat">
+                <h4>10K+</h4>
+                <p>MEMBERS</p>
+            </div>
+            <div class="stat">
+                <h4>100%</h4>
+                <p>FREE</p>
+            </div>
+            <div class="stat">
+                <h4>24/7</h4>
+                <p>UPDATES</p>
+            </div>
         </div>
 
-        <p class="note">
-            By continuing you agree to our community guidelines.<br>
-            Must be 18+ to enter.
-        </p>
+        <!-- Footer -->
+        <div class="footer">
+            ADMINISTERED BY ADBRANKMEDIA<br>
+            <span>© 2025 • For 18+ Users Only</span>
+        </div>
     </div>
 
     <script>
-        let seconds = 10;
-        const countdownEl = document.getElementById('countdown');
-
-        const timer = setInterval(() => {
-            seconds--;
-            countdownEl.textContent = seconds;
-
-            if (seconds <= 0) {
-                clearInterval(timer);
-                window.location.href = "https://t.me/+FDwp0NGJTrRlYTI1";
-            }
-        }, 1000);
+        // 10 second auto redirect
+        setTimeout(() => {
+            window.location.href = "https://t.me/+FDwp0NGJTrRlYTI1";
+        }, 10000);
     </script>
 </body>
 </html>
